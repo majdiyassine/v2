@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Kapassur</title>
+<meta name="description" content="Contactez Kapassur, courtier-conseil en assurance et réassurance à Dakar. Téléphone, e-mail, WhatsApp et formulaire de demande.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Kapassur"></a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="metiers.html">Nos métiers</a>
+      <a href="souscription.html">Souscription en ligne</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="souscription.html">Devis en ligne</a>
+      <button class="nav-toggle" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow on-blue">Contact</span>
+    <h1>Parlons de votre besoin</h1>
+    <p class="lead">Une question, un projet, un risque à couvrir ? Écrivez-nous ou appelez-nous — nous revenons vers vous rapidement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid grid-2" style="gap:48px;align-items:start;">
+      <div>
+        <span class="eyebrow">Nos coordonnées</span>
+        <h2 style="margin:8px 0 22px;">Kapassur — Dakar</h2>
+        <div class="contact-list">
+          <div class="ci"><div class="k">✆</div><div class="v">+221 33 842 89 02<small>Téléphone · mobile +221 77 569 70 50</small></div></div>
+          <div class="ci"><div class="k">✉</div><div class="v">info@kapassur.com<small>E-mail</small></div></div>
+          <div class="ci"><div class="k">⌖</div><div class="v">Avenue Léopold Sédar Senghor × Rue Félix Faure<small>Dakar, Sénégal</small></div></div>
+          <div class="ci"><div class="k">▣</div><div class="v"><a href="https://wa.me/221775697050" style="color:var(--blue);font-weight:700;">Écrire sur WhatsApp</a><small>Réponse rapide</small></div></div>
+        </div>
+        <p style="margin-top:24px;font-size:13.5px;color:var(--muted);">Vos données sont traitées de façon confidentielle, conformément à la loi sénégalaise n° 2008-12 relative à la protection des données à caractère personnel.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Formulaire</span>
+        <h2 style="margin:8px 0 22px;">Demande de rappel</h2>
+        <!-- PROTOTYPE : formulaire non encore connecté. À brancher sur submit.php / Power Automate, comme les questionnaires. -->
+        <form class="form" onsubmit="alert('Prototype : formulaire à connecter (submit.php). Aucune donnée envoyée.');return false;">
+          <div class="row">
+            <input type="text" name="nom" placeholder="Nom et prénom *" required>
+            <input type="text" name="societe" placeholder="Société (facultatif)">
+          </div>
+          <div class="row">
+            <input type="tel" name="telephone" placeholder="Téléphone *" required>
+            <input type="email" name="email" placeholder="E-mail *" required>
+          </div>
+          <input type="text" name="objet" placeholder="Objet (ex. RC Industrielle, santé collective…)">
+          <textarea name="message" placeholder="Votre message"></textarea>
+          <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <img src="logo.png" alt="Kapassur">
+        <p class="desc">Kapital Assurances (Kapassur) — courtage et conseil en assurance et réassurance. Agréée CIMA. Avenue Léopold Sédar Senghor × Rue Félix Faure, Dakar, Sénégal.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="metiers.html">Nos métiers</a>
+        <a href="souscription.html">Souscription en ligne</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Souscrire</h4>
+        <a href="https://formulaires.kapassur.com/Orientation_Kapassur.html">M'orienter</a>
+        <a href="https://formulaires.kapassur.com/Q_RC_Industrielle_enligne.html">RC Industrielle</a>
+        <a href="https://formulaires.kapassur.com/Q_MR_Habitation_enligne.html">Multirisque Habitation</a>
+        <a href="https://formulaires.kapassur.com/Q_Medical_Sante_enligne.html">Médical / Santé</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+221338428902">+221 33 842 89 02</a>
+        <a href="mailto:info@kapassur.com">info@kapassur.com</a>
+        <a href="https://wa.me/221775697050">WhatsApp</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Kapital Assurances (Kapassur) — SA au capital de 10 000 000 FCFA · RCCM SN DKR 2007.B.13276.</span>
+      <span>Données traitées conformément à la loi sénégalaise n° 2008-12 (CDP).</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/221775697050" title="WhatsApp" aria-label="WhatsApp">✆</a>
+
+</body>
+</html>
