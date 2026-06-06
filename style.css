@@ -70,7 +70,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);
   color:#fff;position:relative;overflow:hidden;}
 .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
   background:radial-gradient(circle,rgba(255,192,0,.18),transparent 70%);}
-.hero-inner{max-width:var(--maxw);margin:0 auto;padding:84px 24px 90px;position:relative;z-index:1;}
+.hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 24px 60px;position:relative;z-index:1;}
 .hero h1{color:#fff;max-width:16ch;}
 .hero .lead{color:rgba(255,255,255,.85);max-width:60ch;margin-top:18px;}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
@@ -80,7 +80,10 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);
 .hero-strip b{display:block;color:var(--gold);font-size:32px;font-weight:900;line-height:1.05;letter-spacing:-.5px;margin-bottom:8px;}
 
 /* ============ SECTIONS ============ */
-section{padding:72px 0;}
+section{padding:52px 0;}
+/* Lisibilité : interligne confortable + justification des paragraphes longs */
+.container p{line-height:1.75;}
+.grid-2 p,.profil-bio p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
 section.soft{background:var(--bg-soft);}
 section.blue{background:var(--blue-d);color:#fff;}
 section.blue h2{color:#fff;}
