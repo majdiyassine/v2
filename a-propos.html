@@ -76,8 +76,8 @@
         <div class="chart-wrap"><canvas id="chartPrimes"></canvas></div>
       </div>
       <div class="chart-card">
-        <h3>Taux de persistance du portefeuille</h3>
-        <div class="sub">Continuité des contrats · 2022-2025</div>
+        <h3>Taux de persistance (en valeur)</h3>
+        <div class="sub">Primes conservées d'une année sur l'autre · 2022-2025</div>
         <div class="chart-wrap"><canvas id="chartPersist"></canvas></div>
       </div>
       <div class="chart-card">
@@ -224,7 +224,9 @@
     <div class="foot-grid">
       <div>
         <img src="logo.png" alt="Kapital Assurances">
-        <p class="desc"><strong>Kapital Assurances</strong> (Kapassur)<br>Courtage et conseil en assurance et réassurance, agréé CIMA.<br>Avenue Léopold Sédar Senghor × Rue Félix Faure, Dakar.</p>
+        <p class="desc"><strong>Kapital Assurances</strong> (Kapassur)</p>
+        <p class="desc" style="margin-top:10px;">Courtage et conseil en assurance et réassurance · agréé CIMA</p>
+        <p class="desc" style="margin-top:10px;">Avenue Léopold Sédar Senghor × Rue Félix Faure, Dakar</p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -265,7 +267,7 @@
   var p=document.getElementById('chartPrimes');
   if(p)new Chart(p,{type:'bar',data:{labels:['2022','2023','2024','2025'],datasets:[{data:[1.8,1.8,1.9,11.6],backgroundColor:[blue,blue,blue,gold],borderRadius:6,maxBarThickness:62}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+' M€';}}}},scales:{y:{beginAtZero:true,grid:{color:grid},ticks:{callback:function(v){return v+' M€';}}},x:{grid:{display:false}}}}});
   var pe=document.getElementById('chartPersist');
-  if(pe)new Chart(pe,{type:'line',data:{labels:['2022-23','2023-24','2024-25'],datasets:[{data:[78.9,79.6,78.2],borderColor:blue,backgroundColor:'rgba(1,81,161,.08)',fill:true,tension:.3,pointBackgroundColor:gold,pointBorderColor:gold,pointRadius:5,borderWidth:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+' %';}}}},scales:{y:{min:0,max:100,grid:{color:grid},ticks:{callback:function(v){return v+' %';}}},x:{grid:{display:false}}}}});
+  if(pe)new Chart(pe,{type:'line',data:{labels:['2022-23','2023-24','2024-25'],datasets:[{data:[94.9,97.7,92.6],borderColor:blue,backgroundColor:'rgba(1,81,161,.08)',fill:true,tension:.3,pointBackgroundColor:gold,pointBorderColor:gold,pointRadius:5,borderWidth:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+' %';}}}},scales:{y:{min:0,max:100,grid:{color:grid},ticks:{callback:function(v){return v+' %';}}},x:{grid:{display:false}}}}});
   var m=document.getElementById('chartMix');
   if(m)new Chart(m,{type:'doughnut',data:{labels:['Book propre','Via réassurance'],datasets:[{data:[7.0,4.6],backgroundColor:[blue,gold],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'66%',plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed+' M€';}}}}}});
 })();
