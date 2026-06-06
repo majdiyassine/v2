@@ -63,6 +63,10 @@
       <h2>Une croissance portée par les comptes corporate</h2>
       <p class="lead">Les primes placées ont fortement progressé en 2025, tirées par de nouveaux mandats d'entreprises et l'activité de réassurance.</p>
     </div>
+    <div class="hl-stat">
+      <b>~93 %</b>
+      <span>de <strong>taux de renouvellement annuel</strong> (primes conservées d'une année sur l'autre) : une base de clients fidèles — industriels et grands comptes — qui nous renouvellent leur confiance.</span>
+    </div>
     <div class="charts">
       <div class="chart-card">
         <h3>Évolution des primes placées</h3>
@@ -70,8 +74,13 @@
         <div class="chart-wrap"><canvas id="chartPrimes"></canvas></div>
       </div>
       <div class="chart-card">
+        <h3>Taille du bilan</h3>
+        <div class="sub">Total bilan · millions FCFA · 2023–2025</div>
+        <div class="chart-wrap"><canvas id="chartBilan"></canvas></div>
+      </div>
+      <div class="chart-card">
         <h3>Structure 2025</h3>
-        <div class="sub">Répartition des primes placées (M€)</div>
+        <div class="sub">Primes placées (M€)</div>
         <div class="chart-wrap"><canvas id="chartMix"></canvas></div>
       </div>
     </div>
@@ -232,6 +241,8 @@
   var blue='#0151A1',gold='#FFC000',grid='rgba(0,0,0,.06)';
   var p=document.getElementById('chartPrimes');
   if(p)new Chart(p,{type:'bar',data:{labels:['2022','2023','2024','2025'],datasets:[{data:[1.8,1.8,1.9,11.6],backgroundColor:[blue,blue,blue,gold],borderRadius:6,maxBarThickness:62}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+' M€';}}}},scales:{y:{beginAtZero:true,grid:{color:grid},ticks:{callback:function(v){return v+' M€';}}},x:{grid:{display:false}}}}});
+  var b=document.getElementById('chartBilan');
+  if(b)new Chart(b,{type:'bar',data:{labels:['2023','2024','2025'],datasets:[{data:[104,124,166],backgroundColor:[blue,blue,gold],borderRadius:6,maxBarThickness:56}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+' M FCFA';}}}},scales:{y:{beginAtZero:true,grid:{color:grid},ticks:{callback:function(v){return v+' M';}}},x:{grid:{display:false}}}}});
   var m=document.getElementById('chartMix');
   if(m)new Chart(m,{type:'doughnut',data:{labels:['Book propre','Via réassurance'],datasets:[{data:[7.0,4.6],backgroundColor:[blue,gold],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed+' M€';}}}}}});
 })();

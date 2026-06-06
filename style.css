@@ -163,7 +163,10 @@ section.blue h2{color:#fff;}
 .k-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 14px;text-align:center;}
 .k-val{font-size:27px;font-weight:900;color:var(--blue);line-height:1;}
 .k-lbl{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.35;}
-.charts{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:stretch;}
+.charts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+.hl-stat{display:flex;align-items:baseline;gap:14px;background:linear-gradient(120deg,#fff,var(--bg-blue-soft));border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:var(--radius);padding:18px 24px;margin-bottom:24px;}
+.hl-stat b{font-size:34px;font-weight:900;color:var(--blue);line-height:1;}
+.hl-stat span{font-size:14px;color:var(--text);}
 .chart-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
 .chart-card h3{font-size:16px;margin-bottom:2px;}
 .chart-card .sub{font-size:12px;color:var(--muted);margin-bottom:16px;}
